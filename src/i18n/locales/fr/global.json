@@ -1,0 +1,7 @@
+{
+    "notFound": {
+        "title": "Page introuvable",
+        "invalid": "L'URL {url} n'existe pas",
+        "backToHomeLink": "Retour à l'accueil"
+    }
+}
