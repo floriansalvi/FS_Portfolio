@@ -12,7 +12,7 @@ useSeoLang(locales, baseUrl)
 
 <template>
   <TheHeader/>
-  <main>
+  <main class="content">
     <router-view/>
   </main>
   <TheFooter/>

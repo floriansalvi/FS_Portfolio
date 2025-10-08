@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Switzer';
+  src: url('@/assets/fonts/Switzer/Switzer-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('@/assets/fonts/Switzer/Switzer-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('@/assets/fonts/Switzer/Switzer-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk';
+  src: url('@/assets/fonts/ClashGrotesk/ClashGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk';
+  src: url('@/assets/fonts/ClashGrotesk/ClashGrotesk-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk';
+  src: url('@/assets/fonts/ClashGrotesk/ClashGrotesk-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    /* Colors */
+    --color-bg: hsl(0, 0%, 100%);
+    --color-bg-muted: hsl(0, 0%, 95%);
+    --color-txt: hsl(0, 0%, 5%);
+    --color-txt-muted: hsl(0, 0%, 30%);
+    --color-accent: hsl(261 100% 45%);
+    --color-txt-accent: hsl(0, 0%, 100%);
+
+    --color-shadow: hsla(0, 0%, 95%, 0.1);
+
+    --color-danger: hsl(0, 70%,57%);
+    --color-warning: hsl(30, 95%,64%);
+    --color-success: hsl(107,69%,70%);
+    --color-info: hsl(209, 70%,60%);
+
+    /* Fonts */
+    --font-family-display: 'Switzer', sans-serif;
+    --font-family-body: 'ClashGrotesk', sans-serif;
+
+    /* Font Sizes */
+    --font-size-h1: 4.5rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2rem;
+    --font-size-h4: 1.5rem;
+    --font-size-p: 1.125rem;
+    --font-size-small: 1rem;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Line Heights */
+    --line-height-small: 1.2;
+    --line-height-regular: 1.5;
+
+    /* Spacing */
+    --spacing-xxs: .25rem;
+    --spacing-xs: .5rem;
+    --spacing-s: .75rem;
+    --spacing-m: 1rem;
+    --spacing-l: 2rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+
+    /* Sizes */
+    --size-icon: 1.5rem;
+    --size-container: clamp(320px, 95vw, 1440px);
+
+    --size-header: 4.5rem;
+    --size-footer: .5dvh;
+
+    /* Borders */
+    --border-thin: 1px solid var(--color-accent);
+    --border-thick: 2px solid var(--color-accent);
+
+    /* Radius */
+    --radius-s: .25rem;
+    --radius-m: .5rem;
+    --radius-l: .75rem;
+    --radius-xl: 1.25rem;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-color: color .2s ease-in-out;
+    --transition-background-color: background-color .2s ease-in-out;
+    --transition-shadow: box-shadow .2s ease-in-out;
+    --transition-transform: transform .2s ease-in-out;
+    --transition-width: width .2s ease-in-out;
+    
+    /* Z-index */
+    --z-index-dropdown: 100;
+    --z-index-sticky: 200;
+    --z-index-modal: 300;
+    --z-index-tooltip: 400;
+}
+
+html.dark {
+    /* Colors */
+    --color-bg: hsl(0, 0%, 5%);
+    --color-bg-muted: hsl(0, 0%, 10%);
+    --color-txt: hsl(0, 0%, 95%);
+    --color-txt-muted: hsl(0, 0%, 70%);
+    --color-accent: hsl(251 100% 65%);
+    --color-txt-accent: hsl(0, 0%, 100%)
+
+    --color-danger: hsl(0, 70%,57%);
+    --color-warning: hsl(30, 95%,64%);
+    --color-success: hsl(107,69%,70%);
+    --color-info: hsl(209, 70%,60%);
+}
+
+html {
+    transition:
+        var(--transition-color),
+        var(--transition-background-color);
+}

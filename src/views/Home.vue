@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h1>{{ $t('home.meta.title') }}</h1>
   </div>
 </template>

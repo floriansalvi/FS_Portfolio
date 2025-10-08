@@ -17,10 +17,13 @@ const NotFound = () => import("@/views/NotFound.vue")
 const routes = [
     {
         path: '/',
-        redirect: () => getLocalStorageLocale(),
+        redirect: () => {
+            const locale = getLocalStorageLocale();
+            return `/${locale}/`;
+        }
     },
     {
-        path: `/:locale`,
+        path: `/:locale/`,
         component: Layout,
         children: [
             {
@@ -29,28 +32,28 @@ const routes = [
                 component: Home,
             },
             {
-                path: 'projects',
+                path: 'projects/',
                 name: 'Projects',
                 component: Projects,
             },
             {
-                path: 'projects/:id',
+                path: 'projects/:slug/',
                 name: 'ProjectDetail',
                 component: ProjectDetails,
                 props: true,
             },
             {
-                path: 'services',
+                path: 'services/',
                 name: 'Services',
                 component: Services,
             },
             {
-                path: 'about',
+                path: 'about/',
                 name: 'About',
                 component: About,
             },
             {
-                path: 'contact',
+                path: 'contact/',
                 name: 'Contact',
                 component: Contact,
             },

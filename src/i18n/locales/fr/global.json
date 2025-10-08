@@ -1,4 +1,44 @@
 {
+    "header": {
+        "nav": {
+            "links": {
+                "home": "accueil",
+                "projects": "projets",
+                "services" : "prestations",
+                "about": "à propos",
+                "contact": "contact"
+            },
+            "alt": "Naviguation principale"
+        },
+        "languageSelectAlt": "options de langue"
+    },
+    "footer": {
+        "logoAlt": "Florian Salvi",
+        "nav": {
+            "title": "Navigation",
+            "navAlt": "Navigation secondaire",
+            "links": {
+                "home": "accueil",
+                "projects": "projets",
+                "services" : "prestations",
+                "about": "à propos",
+                "contact": "contact"
+            }
+        },
+        "socials": {
+            "title": "Suivez-moi",
+            "navAlt": "Réseaux sociaux",
+            "links": {
+                "linkedin": "LinkedIn",
+                "github": "GitHub"
+            }
+        }
+    },
+    "banners": {
+        "1": {
+            "title": "Transformons vos idées en expériences digitales uniques."
+        }
+    },
     "notFound": {
         "title": "Page introuvable",
         "invalid": "L'URL {url} n'existe pas",

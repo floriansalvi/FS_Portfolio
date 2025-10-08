@@ -1,4 +1,45 @@
 {
+    "header": {
+        "logoAlt": "Florian Salvi",
+        "nav": {
+            "navAlt": "Main naviguation" ,
+            "links": {
+                "home": "home",
+                "projects": "projects",
+                "services" : "services",
+                "about": "about",
+                "contact": "contact"
+            }
+        },
+        "languageSelectAlt": "language options"
+    },
+    "footer": {
+        "logoAlt": "Florian Salvi",
+        "nav": {
+            "title": "Navigation",
+            "navAlt": "Footer navigation",
+            "links": {
+                "home": "home",
+                "projects": "projects",
+                "services" : "services",
+                "about": "about",
+                "contact": "contact"
+            }
+        },
+        "socials": {
+            "title": "Follow me",
+            "navAlt": "Social links",
+            "links": {
+                "linkedin": "LinkedIn",
+                "github": "GitHub"
+            }
+        }
+    },
+    "banners": {
+        "1": {
+            "title": "Créons une expérience unique."
+        }
+    },
     "notFound": {
         "title": "Page not found",
         "invalid": "The URL {url} does not exist",

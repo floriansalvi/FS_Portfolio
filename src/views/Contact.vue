@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div>
-    
+  <div class="container layout">
+    <h2>{{ $t('contact.meta.title') }}</h2>
   </div>
 </template>
 

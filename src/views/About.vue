@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div>
-    <h1>{{ $t('about.meta.title') }}</h1>
+  <div class="container layout">
+    <h2>{{ $t('about.meta.title') }}</h2>
   </div>
 </template>
 
