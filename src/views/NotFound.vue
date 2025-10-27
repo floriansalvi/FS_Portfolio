@@ -4,7 +4,8 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const route = useRoute();
-const fullUrl = computed(() => `${window.location.origin}${route.fullPath}`);
+const fullUrl = computed(() => route.query.from || `${window.location.origin}${route.fullPath}`);
+
 
 // Correctement initialisé
 const { t } = useI18n();

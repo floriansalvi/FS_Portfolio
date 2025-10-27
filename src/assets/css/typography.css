@@ -4,7 +4,7 @@ h2,
 h3,
 h4 {
     font-family: var(--font-family-display);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-medium);
     line-height: var(--line-height-small);
     text-wrap: balance;
 }
@@ -36,9 +36,13 @@ a {
     }
 }
 
-span.small {
+.small {
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-small);
     line-height: var(--line-height-regular);
+}
+
+.muted {
+    color: var(--color-txt-muted);
 }

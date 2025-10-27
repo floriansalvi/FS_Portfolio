@@ -1,6 +1,14 @@
 {
     "meta": {
         "title": "Projets",
-        "description": "Xxx"
+        "description": "Découvrez une sélection des projets de développement web et UX/UI que j'ai réalisés."
+    },
+    "details": {
+        "description": "Description",
+        "completion": "Réalisation",
+        "categories": "Catégories",
+        "technologies": "Technologies",
+        "Github": "Code",
+        "demo": "Découvrir"
     }
 }

@@ -3,9 +3,9 @@
         "slug": "movie-mate",
         "meta": {
             "title": "MovieMate",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis velit ut mauris pharetra, sed tincidunt sapien feugiat. Curabitur dapibus, lacus at dignissim viverra, justo urna fermentum odio, non commodo justo nisl a sapien. Integer aliquet, enim ut cursus ultricies, nibh ligula finibus libero, a pretium sapien odio nec justo.",
+            "description": "A caption",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/movie-mate/cover.png",
+            "coverImg": "/images/projects/movie-mate/cover.webp",
             "categories": [
                 "Fullstack"
             ]
@@ -50,7 +50,7 @@
             "title": "Lamponi",
             "description": "Xxx",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/lamponi/cover.png",
+            "coverImg": "/images/projects/lamponi/cover.webp",
             "categories": [
                 "E-commerce"
             ]
@@ -94,7 +94,7 @@
             "title": "ScoutPath",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/scout-path/cover.png",
+            "coverImg": "/images/projects/scout-path/cover.webp",
             "categories": [
                 "Fullstack"
             ]
@@ -139,7 +139,7 @@
             "title": "TrainTracker",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/train-tracker/cover.png",
+            "coverImg": "/images/projects/train-tracker/cover.webp",
             "categories": [
                 "Frontend",
                 "Data Viz"                
@@ -180,12 +180,12 @@
         ]
     },
     {
-        "slug": "pawfect-macth",
+        "slug": "pawfect-match",
         "meta": {
             "title": "PawfectMatch",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/pawfect-macth/cover.png",
+            "coverImg": "/images/projects/pawfect-match/cover.webp",
             "categories": [
                 "UX",
                 "UI"                
@@ -200,25 +200,96 @@
             {
                 "title": "Xxx",
                 "content": "Xxx",
-                "img": "/images/projects/pawfect-macth/1.png",
+                "img": "/images/projects/pawfect-match/1.png",
                 "imgAlt": "Xxx"
             },
             {
                 "title": "Xxx",
                 "content": "Xxx",
-                "img": "/images/projects/pawfect-macth/2.png",
+                "img": "/images/projects/pawfect-match/2.png",
                 "imgAlt": "Xxx"
             },
             {
                 "title": "Xxx",
                 "content": "Xxx",
-                "img": "/images/projects/pawfect-macth/3.png",
+                "img": "/images/projects/pawfect-match/3.png",
                 "imgAlt": "Xxx"
             }
         ],
         "extraImgs": [
-            "/images/projects/pawfect-macth/4.png",
-            "/images/projects/pawfect-macth/5.png"
+            "/images/projects/pawfect-match/4.png",
+            "/images/projects/pawfect-match/5.png"
+        ]
+    },
+    {
+        "slug": "breitling-league",
+        "meta": {
+            "title": "Breitling League",
+            "description": "Développement d’une plateforme web de formation gamifiée (Laravel, MySQL, Vue.js)",
+            "date": "2025-06-01",
+            "coverImg": "/images/projects/breitling-league/cover.webp",
+            "categories": [
+                "Fullstack",
+                "UX/UI"
+            ]
+        },
+        "technologies": [
+            "Laravel",
+            "MySQL",
+            "Vue.js"
+        ],
+        "links": {
+            "github": "https://github.com/floriansalvi/HEIG-VD_ProgServ_MovieMate.git"
+        },
+        "intro": {
+            "text": "Durant le projet d’articulation du quatrième semestre à la HEIG-VD, notre groupe Noxeo, composé de cinq membres, a développé une plateforme répondant à la problématique proposée par Breitling.\n\nLa marque horlogère souhaitait optimiser le processus de formation de ses revendeurs grâce à une plateforme spécialisée.\n\nNotre équipe a conçu un Proof of Concept (POC) d’une plateforme web proposant des modules de formation basés sur la gamification. En cinq semaines, nous avons réalisé l’idéation, l’analyse, la création de maquettes et prototypes, puis développé une application web complète.",
+            "images": [
+                {
+                    "img": "/images/projects/breitling-league/1.webp",
+                    "imgAlt": "Maquette de la page d’accueil de la plateforme",
+                    "priority": 1
+                }
+            ]
+        },
+        "sections": [
+            {
+                "title": "Conception",
+                "text": "Le projet a commencé par une phase collaborative. Ensemble, nous avons analysé le brief et étudié les plateformes concurrentes, élaboré des wireframes pour structurer l’application, défini l’architecture de l’information et construit un user flow détaillé.",
+                "images": [
+                    {
+                        "img": "/images/projects/breitling-league/2.webp",
+                        "imgAlt": "Wireframe de la plateforme",
+                        "priority": 2
+                    },
+                    {
+                        "img": "/images/projects/breitling-league/3.webp",
+                        "imgAlt": "User flow illustrant le parcours d’un revendeur",
+                        "priority": 2
+                    }
+                ]
+            },
+            {
+                "title": "Développement",
+                "text": "J’ai été responsable du back-end, ce qui s’est traduit par plusieurs étapes : modélisation de la base de données avec un diagramme de classes et un schéma relationnel, définition des fonctions nécessaires et des routes API, puis développement d’une API REST en Laravel et MySQL selon une architecture MVC.\n\nEnsuite, j’ai collaboré avec le second développeur pour intégrer l’API au front-end développé en Vue.js.",
+                "images": [
+                    {
+                        "img": "/images/projects/breitling-league/4.webp",
+                        "imgAlt": "Diagramme de classes de la base de données",
+                        "priority": 1
+                    },
+                    {
+                        "img": "/images/projects/breitling-league/5.webp",
+                        "imgAlt": "Extrait du code source",
+                        "priority": 2
+                    },
+                    {
+                        "img": "/images/projects/breitling-league/6.webp",
+                        "imgAlt": "Intégration de l’API au front-end Vue.js",
+                        "priority": 2
+                    }
+                ]
+            }
         ]
     }
+
 ]

@@ -31,7 +31,8 @@ const sortedProjects = computed(() => {
 
 <template>
   <div class="container layout">
-    <h2>{{ $t('projects.meta.title') }}</h2>
+    <h1>{{ $t('projects.meta.title') }}</h1>
+    <p>{{$t('projects.meta.description')}}</p>
     <ul class="grid-m">
         <BaseProjectCard
             v-for="project in sortedProjects"
@@ -44,5 +45,7 @@ const sortedProjects = computed(() => {
 </template>
 
 <style scoped>
-
+p {
+  color: var(--color-txt-muted);
+}
 </style>

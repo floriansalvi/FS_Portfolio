@@ -26,11 +26,17 @@
             }
         },
         "socials": {
-            "title": "Suivez-moi",
+            "title": "Suivez moi",
             "navAlt": "Réseaux sociaux",
             "links": {
-                "linkedin": "LinkedIn",
-                "github": "GitHub"
+                "linkedin": {
+                    "label": "LinkedIn",
+                    "link": "https://www.linkedin.com/in/florian-salvi/?locale=fr_FR"
+                },
+                "github": {
+                    "label": "Github",
+                    "link": "https://github.com/floriansalvi"
+                }
             }
         }
     },

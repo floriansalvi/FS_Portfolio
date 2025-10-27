@@ -68,13 +68,13 @@ const { locale } = useI18n();
         <h4>{{ $t('global.footer.socials.title') }}</h4>
         <ul>
           <li>
-            <a href="https://www.linkedin.com/in/florian-salvi" target="_blank" rel="noopener" :aria-label="$t('global.footer.socials.links.linkedin')">
-              {{ $t('global.footer.socials.links.linkedin') }}
+            <a :href="$t('global.footer.socials.links.linkedin.link')" target="_blank" rel="noopener" :aria-label="$t('global.footer.socials.links.linkedin.label')">
+              {{ $t('global.footer.socials.links.linkedin.label') }}
             </a>
           </li>
           <li>
-            <a href="https://github.com/floriansalvi" target="_blank" rel="noopener" :aria-label="$t('global.footer.socials.links.github')">
-              {{ $t('global.footer.socials.links.github') }}
+            <a :href="$t('global.footer.socials.links.github.link')" target="_blank" rel="noopener" :aria-label="$t('global.footer.socials.links.github.label')">
+              {{ $t('global.footer.socials.links.github.label') }}
             </a>
           </li>
         </ul>
@@ -92,7 +92,7 @@ footer {
   gap: var(--spacing-m);
   flex-direction: column;
   position: relative;
-  padding-block: var(--spacing-l);
+  padding-block: var(--spacing-xl);
   
   & .container {
     display: flex;
@@ -136,6 +136,6 @@ footer a:hover::after {
 }
 
 h4 {
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
 }
 </style>

@@ -100,20 +100,19 @@ button {
     }
 }
 
-button:hover {
-  transform: scale(1.1);
+button {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-s);
 }
 
-button img {
-  width: 1.5rem; /* taille SVG */
-  height: 1.5rem;
-  transition: filter 0.2s ease;
+button:hover svg {
+    transform: scale(1.1);
 }
 
-/* Exemple pour recolorer le SVG si c’est un SVG inline avec fill actuel */
-/* Si tes SVG sont des images externes, il faudra les recolorer via un <svg> inline ou filter */
-button img.dark-icon {
-  filter: brightness(0) invert(1); /* ex: lune blanche sur fond sombre */
+button svg {
+  width: 1.25rem; /* taille SVG */
+  height: 1.25rem;
+  transition: transform 0.2s ease;
 }
-
 </style>

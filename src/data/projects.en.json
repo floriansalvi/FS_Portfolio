@@ -5,7 +5,7 @@
             "title": "MovieMate",
             "description": "A caption",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/movie-mate/cover.png",
+            "coverImg": "/images/projects/movie-mate/cover.webp",
             "categories": [
                 "Fullstack"
             ]
@@ -50,7 +50,7 @@
             "title": "Lamponi",
             "description": "Xxx",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/lamponi/cover.png",
+            "coverImg": "/images/projects/lamponi/cover.webp",
             "categories": [
                 "E-commerce"
             ]
@@ -94,7 +94,7 @@
             "title": "ScoutPath",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/scout-path/cover.png",
+            "coverImg": "/images/projects/scout-path/cover.webp",
             "categories": [
                 "Fullstack"
             ]
@@ -139,7 +139,7 @@
             "title": "TrainTracker",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/train-tracker/cover.png",
+            "coverImg": "/images/projects/train-tracker/cover.webp",
             "categories": [
                 "Frontend",
                 "Data Viz"                
@@ -185,7 +185,7 @@
             "title": "PawfectMatch",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/pawfect-match/cover.png",
+            "coverImg": "/images/projects/pawfect-match/cover.webp",
             "categories": [
                 "UX",
                 "UI"                
@@ -219,6 +219,52 @@
         "extraImgs": [
             "/images/projects/pawfect-match/4.png",
             "/images/projects/pawfect-match/5.png"
+        ]
+    },
+    {
+        "slug": "breitling-league",
+        "meta": {
+            "title": "Breitling League",
+            "description": "A caption",
+            "date": "2025-06-01",
+            "coverImg": "/images/projects/breitling-league/cover.webp",
+            "categories": [
+                "Fullstack",
+                "UX/UI"
+            ]
+        },
+        "technologies": [
+            "PHP",
+            "MySQL",
+            "HTML",
+            "CSS"
+        ],
+        "links": {
+            "github": "https://github.com/floriansalvi/HEIG-VD_ProgServ_MovieMate.git"
+        },
+        "text": [
+            {
+                "title": "Xxx",
+                "content": "Xxx",
+                "img": "/images/projects/movie-mate/1.png",
+                "imgAlt": "Xxx"
+            },
+            {
+                "title": "Xxx",
+                "content": "Xxx",
+                "img": "/images/projects/movie-mate/2.png",
+                "imgAlt": "Xxx"
+            },
+            {
+                "title": "Xxx",
+                "content": "Xxx",
+                "img": "/images/projects/movie-mate/3.png",
+                "imgAlt": "Xxx"
+            }
+        ],
+        "extraImgs": [
+            "/images/projects/movie-mate/4.png",
+            "/images/projects/movie-mate/5.png"
         ]
     }
 ]

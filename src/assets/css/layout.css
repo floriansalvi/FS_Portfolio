@@ -33,11 +33,12 @@ body {
 
     background-color: var(--color-bg-muted);
     padding: var(--spacing-l);
+    border-radius: var(--radius-xl);
 }
 
 .grid-m {
   display: grid;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-l);
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr
 }

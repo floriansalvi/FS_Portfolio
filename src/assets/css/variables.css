@@ -46,12 +46,14 @@ html {
 
 :root {
     /* Colors */
-    --color-bg: hsl(0, 0%, 100%);
-    --color-bg-muted: hsl(0, 0%, 95%);
+    --color-bg: hsl(0, 0%, 95%);
+    --color-bg-muted: hsl(0, 0%, 100%);
     --color-txt: hsl(0, 0%, 5%);
     --color-txt-muted: hsl(0, 0%, 30%);
     --color-accent: hsl(261 100% 45%);
     --color-txt-accent: hsl(0, 0%, 100%);
+
+    --color-gray: hsla(0, 0%, 85%);
 
     --color-shadow: hsla(0, 0%, 95%, 0.1);
 
@@ -65,10 +67,10 @@ html {
     --font-family-body: 'ClashGrotesk', sans-serif;
 
     /* Font Sizes */
-    --font-size-h1: 4.5rem;
-    --font-size-h2: 3rem;
-    --font-size-h3: 2rem;
-    --font-size-h4: 1.5rem;
+    --font-size-h1: 3.625rem;
+    --font-size-h2: 1.375rem;
+    --font-size-h3: 1.125rem;
+    --font-size-h4: 1.125rem;
     --font-size-p: 1.125rem;
     --font-size-small: 1rem;
 
@@ -94,7 +96,7 @@ html {
     --size-icon: 1.5rem;
     --size-container: clamp(320px, 95vw, 1440px);
 
-    --size-header: 4.5rem;
+    --size-header: 5rem;
     --size-footer: .5dvh;
 
     /* Borders */
@@ -129,7 +131,9 @@ html.dark {
     --color-txt: hsl(0, 0%, 95%);
     --color-txt-muted: hsl(0, 0%, 70%);
     --color-accent: hsl(251 100% 65%);
-    --color-txt-accent: hsl(0, 0%, 100%)
+    --color-txt-accent: hsl(0, 0%, 100%);
+
+    --color-gray: hsla(0, 0%, 20%);
 
     --color-danger: hsl(0, 70%,57%);
     --color-warning: hsl(30, 95%,64%);
