@@ -31,8 +31,10 @@ const sortedProjects = computed(() => {
 
 <template>
   <div class="container layout">
-    <h1>{{ $t('projects.meta.title') }}</h1>
-    <p>{{$t('projects.meta.description')}}</p>
+    <div class="paragraph">
+      <h1>{{ $t('projects.meta.title') }}</h1>
+      <p class="muted">{{$t('projects.meta.description')}}</p>
+    </div>
     <ul class="grid-m">
         <BaseProjectCard
             v-for="project in sortedProjects"
@@ -40,12 +42,10 @@ const sortedProjects = computed(() => {
             :project=project
         />
     </ul>
+    <BaseBanner/>
   </div>
-  <BaseBanner/>
+  
 </template>
 
 <style scoped>
-p {
-  color: var(--color-txt-muted);
-}
 </style>

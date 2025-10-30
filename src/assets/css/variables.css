@@ -94,9 +94,14 @@ html {
 
     /* Sizes */
     --size-icon: 1.5rem;
-    --size-container: clamp(320px, 95vw, 1440px);
+    --size-btn: 2.75rem;
 
-    --size-header: 5rem;
+    
+    --size-container: clamp(320px, calc(100dvw - 2*var(--spacing-l)), 16000px);
+
+    /* --size-container: clamp(320px, calc(100dvw - 2*var(--spacing-l)), 1440px); */
+
+    --size-header: 6rem;
     --size-footer: .5dvh;
 
     /* Borders */
@@ -111,17 +116,26 @@ html {
     --radius-full: 9999px;
 
     /* Transitions */
-    --transition-color: color .2s ease-in-out;
-    --transition-background-color: background-color .2s ease-in-out;
-    --transition-shadow: box-shadow .2s ease-in-out;
-    --transition-transform: transform .2s ease-in-out;
-    --transition-width: width .2s ease-in-out;
+    --transition-duration: .2s;
+    --transition-timing: ease-in-out;
+
+    --transition-color: color var(--transition-duration) var(--transition-timing);
+    --transition-background-color: background-color var(--transition-duration) var(--transition-timing);
+    --transition-shadow: box-shadow var(--transition-duration) var(--transition-timing);
+    --transition-transform: transform var(--transition-duration) var(--transition-timing);
+    --transition-width: width var(--transition-duration) var(--transition-timing);
+    --transition-fill: fill var(--transition-duration) var(--transition-timing);
+    --transition-border: border-color var(--transition-duration) var(--transition-timing);
     
     /* Z-index */
     --z-index-dropdown: 100;
     --z-index-sticky: 200;
     --z-index-modal: 300;
     --z-index-tooltip: 400;
+
+    /* Images */
+    --img-ratio-standard: 3 / 2;
+    --img-ratio-wide: 16 / 9;
 }
 
 html.dark {
@@ -145,4 +159,56 @@ html {
     transition:
         var(--transition-color),
         var(--transition-background-color);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    /* Font Sizes */
+    --font-size-h1: 3rem;
+    --font-size-h2: 1.25rem;
+    --font-size-h3: 1.125rem;
+    --font-size-h4: 1.125rem;
+    --font-size-p: 1rem;
+    --font-size-small: 0.9375rem;
+
+    /* Spacing */
+    --spacing-xxs: 0.2rem;
+    --spacing-xs: 0.4rem;
+    --spacing-s: 0.6rem;
+    --spacing-m: 0.8rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4.5rem;
+
+    /* Sizes */
+    --size-header: 5rem;
+
+    --size-btn: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    /* Font Sizes */
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.125rem;
+    --font-size-h3: 1rem;
+    --font-size-h4: 1rem;
+    --font-size-p: 1.125rem;
+    --font-size-small: 0.875rem;
+
+    /* Spacing */
+    --spacing-xxs: 0.15rem;
+    --spacing-xs: 0.3rem;
+    --spacing-s: 0.5rem;
+    --spacing-m: 0.75rem;
+    --spacing-l: 1rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+
+    /* Sizes */
+    --size-header: 4rem;
+
+    --size-btn: 2.75rem;
+  }
 }

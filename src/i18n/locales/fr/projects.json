@@ -8,7 +8,7 @@
         "completion": "Réalisation",
         "categories": "Catégories",
         "technologies": "Technologies",
-        "Github": "Code",
-        "demo": "Découvrir"
+        "github": "Code source",
+        "live": "Découvrir"
     }
 }

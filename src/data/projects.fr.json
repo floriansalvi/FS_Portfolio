@@ -227,7 +227,7 @@
             "title": "Breitling League",
             "description": "Développement d’une plateforme web de formation gamifiée (Laravel, MySQL, Vue.js)",
             "date": "2025-06-01",
-            "coverImg": "/images/projects/breitling-league/cover.webp",
+            "coverImg": "/images/projects/breitling-league/cover",
             "categories": [
                 "Fullstack",
                 "UX/UI"
@@ -239,7 +239,7 @@
             "Vue.js"
         ],
         "links": {
-            "github": "https://github.com/floriansalvi/HEIG-VD_ProgServ_MovieMate.git"
+            "github": "https://github.com/floriansalvi/HEIG-VD_ProjArt_Noxeo"
         },
         "intro": {
             "text": "Durant le projet d’articulation du quatrième semestre à la HEIG-VD, notre groupe Noxeo, composé de cinq membres, a développé une plateforme répondant à la problématique proposée par Breitling.\n\nLa marque horlogère souhaitait optimiser le processus de formation de ses revendeurs grâce à une plateforme spécialisée.\n\nNotre équipe a conçu un Proof of Concept (POC) d’une plateforme web proposant des modules de formation basés sur la gamification. En cinq semaines, nous avons réalisé l’idéation, l’analyse, la création de maquettes et prototypes, puis développé une application web complète.",
@@ -291,5 +291,4 @@
             }
         ]
     }
-
 ]

@@ -3,6 +3,7 @@ import { ref, watchEffect, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import BaseBanner from '../components/BaseBanner.vue';
+import BaseLinkButton from '../components/BaseLinkButton.vue';
 import { formatYearMonth, formatProjectDate } from '../utils/useDate';
 
 const route = useRoute();
@@ -48,15 +49,15 @@ const formattedDate = computed(() =>
 </script>
 
 <template>
-  <div v-if="project" class="container">
-    <div class="layout">
-      <h1>{{ project.meta.title }}</h1>
-      <img :src="project.meta.coverImg" :alt="project.meta.title" />
-      <div class="introduction">
-        <div>
-          <h2 class="muted">{{ $t('projects.details.description') }}</h2>
-          <p v-html="project.intro?.text?.replace(/\n/g, '<br>')"></p>
-        </div>
+  <div v-if="project" class="container layout">
+    <h1>{{ project.meta.title }}</h1>
+    <img :src="project.meta.coverImg" :alt="project.meta.title" />
+    <div class="layout introduction">
+      <div class="wrapper description">
+        <h2 class="muted">{{ $t('projects.details.description') }}</h2>
+        <p v-html="project.intro?.text?.replace(/\n/g, '<br>')"></p>
+      </div>
+      <div class="wrapper info">
         <ul>
           <li v-if="project.meta.date">
             <p class="muted">{{ $t('projects.details.completion') }}</p>
@@ -75,12 +76,36 @@ const formattedDate = computed(() =>
             <h3>{{ project.technologies.join(', ') }}</h3>
           </li>
         </ul>
+        <div class="links">
+          <BaseLinkButton
+            v-if="project.links.github"
+            :link="project.links.github"
+            type="link"
+            :text="$t('projects.details.github')"
+            src="github"
+            :external="true"
+          />
+          <BaseLinkButton
+            v-if="project.links.live"
+            :link="project.links.live"
+            type="link"
+            :text="$t('projects.details.live')"
+            src="live"
+            :external="true"
+          />
+        </div>
       </div>
     </div>
-
-    
-    <div v-for="section in project.sections" :key="section.title" class="project-section">
-      <div class="layout">
+    <img
+          v-if="project.intro?.images?.length"
+          v-for="img in project.intro.images"
+          :key="img.img"
+          :src="img.img"
+          :alt="img.imgAlt"
+          loading="lazy"
+        />
+    <div v-for="section in project.sections" :key="section.title" class="project-section layout">
+      <div class="wrapper">
         <h2 class="muted">{{ section.title }}</h2>
         <p v-html="section.text.replace(/\n/g, '<br>')"></p>
       </div>
@@ -95,30 +120,37 @@ const formattedDate = computed(() =>
         />
       </div>
     </div>
+    <BaseBanner/>
   </div>
-  <BaseBanner/>
 </template>
 
 <style scoped>
 .introduction {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-l);
 
-  & > * {
+  & .description {
     flex: 2;
   }
 
-  & > ul {
+  & .info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-m);
+    gap: var(--spacing-l);
 
-    & > * {
+    & ul {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-xs);
+      gap: var(--spacing-m);
+    }
+
+    & .links {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: var(--spacing-m);
     }
   }
 }
@@ -129,35 +161,52 @@ const formattedDate = computed(() =>
 }
 
 img {
-  border-radius: var(--radius-m);
+  border-radius: var(--radius-l);
+  aspect-ratio: var(--img-ratio-wide);
+  object-fit: cover;
 }
-
-/* Les images priorité 1 occupent toute la largeur */
 .priority-1 {
   grid-column: 1 / -1;
   width: 100%;
   object-fit: cover;
 }
 
-/* Les images priorité 2 occupent deux par ligne */
 .priority-2 {
   width: 100%;
   object-fit: cover;
 }
 
-/* Grille responsive */
 @media (min-width: 769px) {
   .images-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Sur mobile, toutes les images s'affichent en colonne */
 @media (max-width: 768px) {
   .images-grid {
     grid-template-columns: 1fr;
+  }
+
+  .introduction {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--spacing-l);
+  }
+
+  .links > * {
+    flex-grow: 1;
+    justify-content: center;
   }
 }
 
 
 </style>
+
+<!-- <img
+          v-if="project.intro?.images?.length"
+          v-for="img in project.intro.images"
+          :key="img.img"
+          :src="img.img"
+          :alt="img.imgAlt"
+          loading="lazy"
+        /> -->

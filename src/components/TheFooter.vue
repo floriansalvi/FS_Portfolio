@@ -7,13 +7,15 @@ const { locale } = useI18n();
 <template>
   <footer>
     <div  class="container">
-      <router-link
+      <div class="full-width">
+        <router-link
         :to="{ name: 'Home', params: { locale: locale } }"
         :aria-label="$t('global.footer.logoAlt')"
-        class="footer-logo"
+        class="footer-logo full-width"
       >
         <span class="logo">FlorianSalvi<span class="dot">.</span></span>
       </router-link>
+      </div>
       <nav :aria-label="$t('global.footer.nav.navAlt')">
         <h4>{{ $t('global.footer.nav.title') }}</h4>
         <ul class="navigation">
@@ -80,23 +82,22 @@ const { locale } = useI18n();
         </ul>
       </nav>
     </div>
-    <span class="small container">{{ `© Florian Salvi ${ new Date().getFullYear() }` }}</span>
+    <span class="small container full-width">{{ `© Florian Salvi ${ new Date().getFullYear() }` }}</span>
   </footer>
 </template>
 
 <style scoped>
 footer {
-  /* border-top: var(--border-thin);
-  border-color: var(--color-txt); */
   display: flex;
   gap: var(--spacing-m);
   flex-direction: column;
   position: relative;
-  padding-block: var(--spacing-xl);
+  padding-block: var(--spacing-l);
   
   & .container {
     display: flex;
     flex-direction: row;
+    gap: var(--spacing-l);
     justify-content: space-between;
   }
   
@@ -137,5 +138,20 @@ footer a:hover::after {
 
 h4 {
   margin-bottom: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+  footer .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & .full-width {
+      grid-column: span 2;
+    }
+  }
+
+  footer {
+    gap: var(--spacing-l);
+  }
 }
 </style>
