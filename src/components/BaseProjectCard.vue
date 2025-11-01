@@ -21,16 +21,6 @@ const formattedDate = computed(() =>
   <li class="project-item">
     <article @click="$router.push({ name: 'ProjectDetail', params: { locale: locale, slug: project.slug } })" class="project-card">
       <div class="img-wrapper">
-        <!-- <img
-          :src="project.meta.coverImg"
-          :alt="project.meta.title"
-          loading="lazy"
-        /> -->
-        <!-- <img
-          :src="`${project.meta.coverImg}-800.jpg`"
-          :alt="project.meta.title"
-          loading="lazy"
-        /> -->
         <picture>
           <source
             type="image/avif"
