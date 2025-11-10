@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watchEffect, computed } from 'vue';
 import BaseProjectCard from '../components/BaseProjectCard.vue';
-import BaseBanner from '../components/BaseBanner.vue';
+import TheBanner from '../components/TheBanner.vue';
 import { useI18n } from 'vue-i18n';
 
 const { locale } = useI18n();
@@ -42,7 +42,7 @@ const sortedProjects = computed(() => {
             :project=project
         />
     </ul>
-    <BaseBanner/>
+    <TheBanner/>
   </div>
   
 </template>

@@ -2,6 +2,8 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { formatYearMonth, formatProjectDate } from '../utils/useDate';
+import BasePicture from './BasePicture.vue';
+
 const { locale } = useI18n();
 
 const props = defineProps({
@@ -20,57 +22,12 @@ const formattedDate = computed(() =>
 <template>
   <li class="project-item">
     <article @click="$router.push({ name: 'ProjectDetail', params: { locale: locale, slug: project.slug } })" class="project-card">
-      <div class="img-wrapper">
-        <picture>
-          <source
-            type="image/avif"
-            :srcset="[
-              `${project.meta.coverImg}-400.avif 400w`,
-              `${project.meta.coverImg}-800.avif 800w`,
-              `${project.meta.coverImg}-1200.avif 1200w`,
-              `${project.meta.coverImg}-1600.avif 1600w`,
-              `${project.meta.coverImg}-2400.avif 2400w`,
-              `${project.meta.coverImg}-3200.avif 3200w`
-            ].join(', ')"
-            sizes=
-              "(max-width: 600px) 400px,
-              (max-width: 1200px) 800px,
-              (max-width: 1800px) 1200px,
-              (max-width: 2400px) 1600px,
-              (max-width: 3200px) 2400px,
-              3200px"
-          >
-          <source
-            type="image/webp"
-            :srcset="[
-              `${project.meta.coverImg}-400.webp 400w`,
-              `${project.meta.coverImg}-800.webp 800w`,
-              `${project.meta.coverImg}-1200.webp 1200w`,
-              `${project.meta.coverImg}-1600.webp 1600w`,
-              `${project.meta.coverImg}-2400.webp 2400w`,
-              `${project.meta.coverImg}-3200.webp 3200w`
-            ].join(', ')"
-            sizes=
-              "(max-width: 600px) 400px,
-              (max-width: 1200px) 800px,
-              (max-width: 1800px) 1200px,
-              (max-width: 2400px) 1600px,
-              (max-width: 3200px) 2400px,
-              3200px"
-          >
-          <img
-            :src="`${project.meta.coverImg}-800.jpg`"
-            sizes="(max-width: 600px) 400px,
-                  (max-width: 1200px) 800px,
-                  (max-width: 1800px) 1200px,
-                  (max-width: 2400px) 1600px,
-                  (max-width: 3200px) 2400px,
-                  3200px"
-            :alt="`Projet ${project.meta.title}`"
-            loading="lazy"
-          >
-        </picture>
-      </div>
+      <BasePicture
+        :path="project.meta.coverImg"
+        :altTxt="project.meta.title"
+        ratio="3/2"
+        pointer=true
+      />
       <div class="txt-wrapper">
         <p class="categories muted">{{ project.meta.categories.join(', ') }}</p>
         <h2>{{ project.meta.title }}</h2>
@@ -87,6 +44,7 @@ const formattedDate = computed(() =>
 </template>
 
 <style scoped>
+
 .project-item {
   cursor: pointer;
   height: 100%;
@@ -100,22 +58,6 @@ article {
   background-color: var(--color-bg-muted);
   border-radius: var(--radius-l);
   overflow: hidden;
-}
-
-.img-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: var(--img-ratio-standard);
-  overflow: hidden;
-  flex-shrink: 0;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    transition: var(--transition-transform);
-  }
 }
 
 .txt-wrapper {
@@ -139,7 +81,7 @@ article {
   flex-grow: 1;
 }
 
-.project-item:hover img{
+.project-item:hover :deep(.img-wrapper img) {
     transform: scale(1.05);
 }
 </style>

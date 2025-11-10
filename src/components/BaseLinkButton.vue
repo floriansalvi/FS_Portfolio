@@ -13,7 +13,7 @@ const props = defineProps({
       type: String,
       required: true,
       default: 'link',
-      validator: value => ['link', 'mailto'].includes(value)
+      validator: value => ['link', 'mailto', 'tel'].includes(value)
     },
     text: {
       type: String,
@@ -36,7 +36,7 @@ const props = defineProps({
     }
 });
 
-const href = props.type === 'mailto' ? `mailto:${props.link}` : props.link;
+const href = props.type === 'mailto' ? `mailto:${props.link}` : (props.type === 'tel' ? `tel:${props.link}`: props.link);
 const target = props.external ? '_blank' : '_self';
 const rel = props.external ? 'noopener noreferrer' : null;
 
@@ -67,6 +67,7 @@ a {
   height: var(--size-btn);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-xs);
   text-decoration: none;
   background-color: var(--color-accent);

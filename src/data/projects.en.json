@@ -5,7 +5,7 @@
             "title": "MovieMate",
             "description": "A caption",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/movie-mate/cover.webp",
+            "coverImg": "/images/projects/movie-mate/cover",
             "categories": [
                 "Fullstack"
             ]
@@ -50,7 +50,7 @@
             "title": "Lamponi",
             "description": "Xxx",
             "date": "2025-01-01",
-            "coverImg": "/images/projects/lamponi/cover.webp",
+            "coverImg": "/images/projects/lamponi/cover",
             "categories": [
                 "E-commerce"
             ]
@@ -94,7 +94,7 @@
             "title": "ScoutPath",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/scout-path/cover.webp",
+            "coverImg": "/images/projects/scout-path/cover",
             "categories": [
                 "Fullstack"
             ]
@@ -139,7 +139,7 @@
             "title": "TrainTracker",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/train-tracker/cover.webp",
+            "coverImg": "/images/projects/train-tracker/cover",
             "categories": [
                 "Frontend",
                 "Data Viz"                
@@ -185,7 +185,7 @@
             "title": "PawfectMatch",
             "description": "Xxx",
             "date": "2025-05-01",
-            "coverImg": "/images/projects/pawfect-match/cover.webp",
+            "coverImg": "/images/projects/pawfect-match/cover",
             "categories": [
                 "UX",
                 "UI"                
@@ -227,7 +227,7 @@
             "title": "Breitling League",
             "description": "A caption",
             "date": "2025-06-01",
-            "coverImg": "/images/projects/breitling-league/cover.webp",
+            "coverImg": "/images/projects/breitling-league/cover",
             "categories": [
                 "Fullstack",
                 "UX/UI"

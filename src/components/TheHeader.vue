@@ -128,6 +128,7 @@ header {
   & .container {
     margin: auto;
     display: flex;
+    align-items: center;
   }
 }
 
@@ -196,6 +197,7 @@ header {
 .menu-options {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: var(--spacing-m);
 }
 
@@ -225,7 +227,6 @@ header {
   }
 }
 
-/* Animation burger vers croix */
 .burger-button.open span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -238,7 +239,6 @@ header {
   transform: rotate(-45deg);
 }
 
-/* Media query pour écrans < 1024px */
 @media (max-width: 1023px) {
   .burger-button {
     display: flex;
@@ -250,11 +250,13 @@ header {
 
   .menu-options-mobile {
     display: flex;
-    flex-direction: row;
-    gap: var(--spacing-m);
-    padding: var(--spacing-xl) 0;
-    border-top: 1px solid var(--color-txt-muted);
-    margin-top: var(--spacing-l);
+    flex-direction: column-reverse;
+    gap: var(--spacing-l);
+    padding: 1rem var(--spacing-xl);
+
+    & * {
+      width: fit-content;
+    }
   }
 
   nav {
@@ -275,7 +277,7 @@ header {
 
   .menu {
     flex-direction: column;
-    padding: 80px 30px 30px;
+    padding: 5rem var(--spacing-xl) 1rem;
     gap: var(--spacing-l);
   }
 

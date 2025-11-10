@@ -93,11 +93,13 @@ html {
     --spacing-xxl: 6rem;
 
     /* Sizes */
+    --size-dot: 1rem;
     --size-icon: 1.5rem;
     --size-btn: 2.75rem;
 
     
-    --size-container: clamp(320px, calc(100dvw - 2*var(--spacing-l)), 16000px);
+    --size-container: clamp(320px, calc(100dvw - 2*var(--spacing-l)), 1440px);
+    --size-container-padding: 0;
 
     /* --size-container: clamp(320px, calc(100dvw - 2*var(--spacing-l)), 1440px); */
 
@@ -212,3 +214,10 @@ html {
     --size-btn: 2.75rem;
   }
 }
+
+/* @media (min-width: 1800px) {
+  :root {
+     --size-container: 100dvw;
+     --size-container-padding: 5dvw;
+  }
+} */

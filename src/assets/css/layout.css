@@ -19,15 +19,9 @@ body {
   flex: 1;
 }
 
-/* .container {
+.container {
     width: var(--size-container);
     margin: auto;
-} */
-
-.container {
-  width: clamp(320px, 90vw, 1440px);
-  margin-inline: auto;
-  padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
 .layout {
@@ -47,6 +41,10 @@ body {
   padding: var(--spacing-l);
   background-color: var(--color-bg-muted);
   border-radius: var(--radius-l);
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

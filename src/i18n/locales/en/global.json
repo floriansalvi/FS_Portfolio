@@ -50,5 +50,8 @@
         "title": "Page not found",
         "invalid": "The URL {url} does not exist",
         "backToHomeLink": "Back to home"
+    },
+    "backButton": {
+        "label": "Go back"
     }
 }

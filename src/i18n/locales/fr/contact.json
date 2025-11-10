@@ -2,5 +2,20 @@
     "meta": {
         "title": "Contact",
         "description": "Xxx"
+    },
+    "info": {
+        "title": "Travaillons ensemble !",
+        "location": "Nêuchatel, Suisse",
+        "mailBtn": "Écrivez-moi"
+    },
+    "form": {
+        "title": "Formulaire de contact",
+        "fields": {
+            "firstname": "Prénom",
+            "lastname": "Nom",
+            "email": "Email",
+            "message": "Message"
+        },
+        "send": "Envoyer"
     }
 }

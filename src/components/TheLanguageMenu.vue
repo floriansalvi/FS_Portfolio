@@ -42,71 +42,99 @@ const availableLanguageOptions = computed(() =>
 </script>
 
 <template>
-  <select
-    v-model="currentLocale"
-    @change="changeLanguage($event.target.value)"
-    :aria-label="t('global.header.languageSelectAlt')"
-  >
-    <option
-      v-for="lang in availableLanguageOptions"
-      :key="lang.code"
-      :value="lang.code"
-      :lang="lang.code"
+  <div class="select-wrapper">
+    <select
+      v-model="currentLocale"
+      @change="changeLanguage($event.target.value)"
+      :aria-label="t('global.header.languageSelectAlt')"
     >
-      {{ lang.label }}
-    </option>
-  </select>
+      <option
+        v-for="lang in availableLanguageOptions"
+        :key="lang.code"
+        :value="lang.code"
+        :lang="lang.code"
+      >
+        {{ lang.label }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <style scoped>
-select {
-  appearance: none; /* enlève le style par défaut (Firefox/Chrome) */
-  -webkit-appearance: none; /* Safari */
-  -moz-appearance: none; /* Firefox ancien */
 
-  background-color: var(--color-bg-muted);
-  border: var(--border-thick);
-  border-color: transparent;
-  border-radius: 8px;
-  padding: 0.5rem 2.5rem 0.5rem 1rem; /* padding à droite pour la flèche */
-  font-size: 1rem;
-  color: var(--color-txt-muted);
-  cursor: pointer;
+.select-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-select:focus {
+.select-wrapper select {
+  width: fit-content;
+  max-width: 100%;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: inline-block;
+  height: var(--size-btn);
+
+  background-color: transparent;
+  border: var(--border-thin);
+  border-color: var(--color-txt);
+  border-radius: var(--radius-s);
+
+  padding-inline: var(--spacing-s);
+  padding-right: calc(var(--spacing-s) * 2 + 1rem);
+
+  cursor: pointer;
+  font-size: var(--font-size-p);
+  color: var(--color-txt);
+
+  transition: var(--transition-background-color), var(--transition-border-color);
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+
+  width: 1rem;
+  height: 1rem;
+
+  -webkit-mask: url("/images/icons/drop-icon.svg") no-repeat center;
+  mask: url("/images/icons/drop-icon.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  background-color: var(--color-txt);
+  pointer-events: none;
+}
+
+.select-wrapper:hover select {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-txt-accent);
+}
+
+.select-wrapper:hover::after {
+  background-color: var(--color-txt-accent);
+}
+
+.select-wrapper select:focus {
   outline: none;
 }
 
-select:hover {
-  border: var(--border-thick);
-}
-
-/* Ajouter une flèche custom */
-select {
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1rem;
-}
-
-select option {
+.select-wrapper select option {
   background-color: var(--color-bg);
   color: var(--color-txt);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding-inline: var(--spacing-s);
 }
 
-/* survol d’une option (pas tous les navigateurs le gèrent) */
-select option:hover {
-  background-color: var(--color-accent-light);
-  color: var(--color-txt);
-}
-
-/* option sélectionnée */
-select option:checked {
+.select-wrapper select option:hover {
   background-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-txt-accent);
 }
 
 </style>

@@ -92,7 +92,7 @@ footer {
   gap: var(--spacing-m);
   flex-direction: column;
   position: relative;
-  padding-block: var(--spacing-l);
+  padding-block: var(--spacing-xl) var(--spacing-l);
   
   & .container {
     display: flex;

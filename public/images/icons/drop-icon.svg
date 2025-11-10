@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Artboard1" x="0" y="-0" width="500" height="250" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Artboard11" serif:id="Artboard1" x="0" y="-0" width="500" height="250"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g transform="matrix(1.13359,0,0,0.517876,-33.3981,1.05639e-13)">
+            <path d="M35.565,71.129C29.606,59.213 27.824,41.291 31.049,25.722C34.273,10.152 41.87,-0 50.296,-0C146.13,0 353.87,0 449.704,0C458.13,-0 465.727,10.152 468.951,25.722C472.176,41.291 470.394,59.213 464.435,71.129C408.769,182.462 303.423,393.155 264.731,470.537C256.595,486.809 243.405,486.809 235.269,470.537C196.577,393.155 91.231,182.462 35.565,71.129Z" style="fill:white;"/>
+        </g>
+    </g>
+</svg>

@@ -2,8 +2,10 @@
 import { ref, watchEffect, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import BaseBanner from '../components/BaseBanner.vue';
+import BasePicture from '../components/BasePicture.vue';
+import TheBanner from '../components/TheBanner.vue';
 import BaseLinkButton from '../components/BaseLinkButton.vue';
+import TheBackButton from '../components/TheBackButton.vue';
 import { formatYearMonth, formatProjectDate } from '../utils/useDate';
 
 const route = useRoute();
@@ -34,7 +36,6 @@ watchEffect(async () => {
 
   const found = projectsData.find(p => p.slug === projectSlug);
   if (!found) {
-  // Redirige vers la 404 locale
   router.replace(`/${locale.value}/404/`);
   return;
 }
@@ -50,8 +51,15 @@ const formattedDate = computed(() =>
 
 <template>
   <div v-if="project" class="container layout">
-    <h1>{{ project.meta.title }}</h1>
-    <img :src="project.meta.coverImg" :alt="project.meta.title" />
+    <div class="title">
+      <h1>{{ project.meta.title }}</h1>
+      <TheBackButton></TheBackButton>
+    </div>
+    <BasePicture
+        :path="project.meta.coverImg"
+        :altTxt="project.meta.title"
+        ratio="16/9"
+      />
     <div class="layout introduction">
       <div class="wrapper description">
         <h2 class="muted">{{ $t('projects.details.description') }}</h2>
@@ -96,31 +104,32 @@ const formattedDate = computed(() =>
         </div>
       </div>
     </div>
-    <img
-          v-if="project.intro?.images?.length"
-          v-for="img in project.intro.images"
-          :key="img.img"
-          :src="img.img"
-          :alt="img.imgAlt"
-          loading="lazy"
-        />
+    <BasePicture
+      v-if="project.intro?.images?.length"
+      v-for="img in project.intro.images"
+      :key="img.img"
+      :path="img.img"
+      :altTxt="img.imgAlt"
+      ratio="16/9"
+    />
     <div v-for="section in project.sections" :key="section.title" class="project-section layout">
       <div class="wrapper">
         <h2 class="muted">{{ section.title }}</h2>
         <p v-html="section.text.replace(/\n/g, '<br>')"></p>
       </div>
       <div v-if="section.images.length" class="images-grid">
-        <img
+        <BasePicture
           v-for="img in section.images"
           :key="img.img"
-          :src="img.img"
-          :alt="img.imgAlt"
+          :path="img.img"
+          :altTxt="img.imgAlt"
+          ratio="16/9"
+          :zoomable="img.priority === 2 ? true : false"
           :class="`priority-${img.priority}`"
-          loading="lazy"
         />
       </div>
     </div>
-    <BaseBanner/>
+    <TheBanner/>
   </div>
 </template>
 
@@ -160,20 +169,8 @@ const formattedDate = computed(() =>
   gap: var(--spacing-l);
 }
 
-img {
-  border-radius: var(--radius-l);
-  aspect-ratio: var(--img-ratio-wide);
-  object-fit: cover;
-}
-.priority-1 {
-  grid-column: 1 / -1;
-  width: 100%;
-  object-fit: cover;
-}
-
-.priority-2 {
-  width: 100%;
-  object-fit: cover;
+.breadcrumb {
+  display: flex;
 }
 
 @media (min-width: 769px) {
@@ -199,14 +196,14 @@ img {
   }
 }
 
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  align-items: center;
+  justify-content: space-between;
+}
 
 </style>
-
-<!-- <img
-          v-if="project.intro?.images?.length"
-          v-for="img in project.intro.images"
-          :key="img.img"
-          :src="img.img"
-          :alt="img.imgAlt"
-          loading="lazy"
-        /> -->
